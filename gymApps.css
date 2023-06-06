@@ -113,3 +113,9 @@ button {
     font-size: larger;
     padding-top: 10px;
 }
+
+.sub-main {
+    background-image: url("./images/download\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
