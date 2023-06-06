@@ -46,11 +46,16 @@
             justify-content: center;
         }
         .infoEquipment{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 10px 100%;
+            grid-column-gap: 10px;
+        }
+        .instructions{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            width: 95%;
-            gap: 10px;
+            align-items: center;
         }
         .instructions-header{
             width: 100%;
@@ -72,7 +77,10 @@
             font-size: 16px;
             align-items: normal;
             text-align: start;
+            width: (100%/2);
         }
+      
+
 
     </style>
 </head>
@@ -87,18 +95,26 @@
               </div>
         </div>
         <div class="main" >
-            <h1 class="headingEquipment">Equipment Name</h1>
+            <h1 class="headingEquipment">BarBell</h1>
             <div class="equipmentImg">
-                <img src="" alt="Picture Of The Equipment" >
+                <img src="../images/barbell s.jpg" alt="Picture Of The Equipment" width="80%">
             </div>
             <div class="infoEquipment">
                 <div class="instructions">
                     <h2 class="instructions-header">Instructions</h2>
-                    <p class="instructions-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum labore ea fugit odio ullam quae explicabo. Neque, facere commodi adipisci consequuntur non ab deserunt distinctio? Vel, laudantium sequi maiores et numquam nemo, deserunt deleniti delectus ratione aspernatur rem modi, quidem inventore quod dignissimos provident repellat repellendus expedita commodi voluptatum quo dolore quas. Totam rem dicta accusamus voluptas eos earum labore fugit molestias cupiditate? Quibusdam minima numquam eligendi, exercitationem velit recusandae at repudiandae molestiae dolor saepe ab nisi dolorem perferendis praesentium atque ipsam amet labore itaque enim perspiciatis et tempora ipsa. Facere ea nihil quas libero asperiores? Tenetur, molestias fugiat.</p>
+                    <p class="instructions-paragraph">
+                         Stand with your feet shoulder-width apart, holding a dumbbell in each hand, palms facing forward.
+                         Keep your upper arms stationary and exhale as you curl the dumbbells towards your shoulders, contracting your biceps.
+                         Pause briefly at the top of the movement, squeezing your biceps.
+                         Inhale as you slowly lower the dumbbells back to the starting position in a controlled manner.
+                         Repeat for the desired number of repetitions.
+                    </p>
                 </div>
                 <div class="instructions">
                     <h2 class="instructions-header">Target Muscle</h2>
-                    <p class="instructions-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum labore ea fugit odio ullam quae explicabo. Neque, facere commodi adipisci consequuntur non ab deserunt distinctio? Vel, laudantium sequi maiores et numquam nemo, deserunt deleniti delectus ratione aspernatur rem modi, quidem inventore quod dignissimos provident repellat repellendus expedita commodi voluptatum quo dolore quas. Totam rem dicta accusamus voluptas eos earum labore fugit molestias cupiditate? Quibusdam minima numquam eligendi, exercitationem velit recusandae at repudiandae molestiae dolor saepe ab nisi dolorem perferendis praesentium atque ipsam amet labore itaque enim perspiciatis et tempora ipsa. Facere ea nihil quas libero asperiores? Tenetur, molestias fugiat.</p>
+                    <p class="instructions-paragraph">Target Muscle Group: Biceps (front of the upper arm).
+                        Pairing Equipment: Dumbbell bicep curls can be paired with exercises like hammer curls or preacher curls to target the biceps from different angles.
+                    </p>
                 </div>
             </div>
         </div>
