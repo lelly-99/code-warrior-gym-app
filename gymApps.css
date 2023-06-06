@@ -18,15 +18,13 @@ body{
 .header {
     background: #B00020;
     height: 80px;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
 }
 
 .container{
