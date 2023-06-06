@@ -104,9 +104,8 @@ button {
 
 .fit {
     color: #B00020;
-    border-color: #FFFFFF;
-    padding: 20px;
     font-size: larger;
+    margin: 20px;
 }
 
 .bkp {
