@@ -5,11 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gymApps.css">
-    <title>GYM APP</title>
+    <title>BKP GYM APP</title>
 </head>
 <body>
-    
+    <div class="container" >
+        <div class="header" >
+            <h1>BPK</h1>
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </div>
+        <div class="main" >
+            <div class="space">
+                <h2>BKP FITNESS</h2>
+            </div>
+            <div class="space">
+                <button>SCAN EQUIPMENT</button>
+            </div>
+            <div class="content" >
+                <p>Welcome to our revolutionary fitness app! With our cutting-edge technology, scanning a QR code on any gym equipment instantly unlocks a world of possibilities. Our app empowers you with knowledge and creativity, providing an extensive library of exercises tailored to target specific muscle groups. From cardio machines to weightlifting equipment, we've got you covered. But we don't stop at just providing exercise instructions. Our app is your personal fitness guide, offering detailed demonstrations, workout tips, and modifications for all fitness levels. Say goodbye to monotony and hello to endless possibilities with our app.</p>
+            </div>
+        </div>
+        <div class="footer" >
+            <p>&copy; FKB Fitness, 2023</p>
+        </div>
+    </div>
 </body>
+<script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+    </script>
 <script src="../factory-functions/factoryFunction.js"></script>
 <script src="../pages/gymAppDom.js"></script>
 </html>
