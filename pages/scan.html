@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="../gymApps.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"
+        integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>BKP GYM APP</title>
+    <style>
+        .part, .scanner-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 150px;
+            margin-bottom: 150px;
+            font-family: 'Inter';
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
-    <div class="page-container" >
-        <div class="header" >
-            <a href="../index.html"><h1>BPK</h1></a>
+    <div class="page-container">
+        <div class="header">
+            <a href="../index.html">
+                <h1>BPK</h1>
+            </a>
             <div class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
         </div>
-        <div class="main" >
+        <div class="main">
+            <div class="part scanner-section">
+                <div style="width: 500px" id="reader"></div>
+            </div>
         </div>
-        <div class="footer" >
+        <div class="footer">
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
 </body>
 <script>
     function myFunction(x) {
-      x.classList.toggle("change");
+        x.classList.toggle("change");
     }
-    </script>
+</script>
 <script src="../factory-functions/factoryFunction.js"></script>
 <script src="../pages/gymAppDom.js"></script>
+
 </html>
