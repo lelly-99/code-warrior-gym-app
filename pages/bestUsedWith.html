@@ -34,24 +34,26 @@
 </body>
 <script>
     function myFunction(x) {
-       x.classList.toggle("change");
-       var menu = document.getElementById("menu");
-       if (menu.style.top === "-500px") {
-       openmenu();
-       } else {
-       closemenu();
-       }
+        x.classList.toggle("change");
+        var menu = document.getElementById("menu");
+  
+        if (menu.style.top === "65px") {
+          closemenu();
+        } else {
+          openmenu();
+        }
     }
 
     function openmenu() {
       var menu = document.getElementById("menu");
-      menu.style.top = "65px";
+          menu.style.top = "65px";
     }
 
     function closemenu() {
       var menu = document.getElementById("menu");
       menu.style.top = "-500px";
     }
+
     </script>
 <script src="../factory-functions/factoryFunction.js"></script>
 <script src="../pages/gymAppDom.js"></script>
