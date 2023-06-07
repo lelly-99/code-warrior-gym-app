@@ -59,13 +59,10 @@ ul{
         position: fixed;
         top: -500px;
         right: 0px;
-        /* padding-top: 40px; */
-        /* margin-left:50px ; */
     }
     li{
         position: relative;
         padding-top: 25px;
-        outline: 1px solid red;
         width: 100%;
     }
 }
