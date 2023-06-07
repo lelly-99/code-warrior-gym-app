@@ -1,8 +1,6 @@
 
 
 function onScanSuccess(decodedText, decodedResult) {
-    // Handle on success condition with the decoded text or result.
-    // console.log(`Scan result: ${decodedText}`, decodedResult);
     console.log(decodedText);
     console.log(decodedResult);
     localStorage.setItem('equipment', decodedText);
