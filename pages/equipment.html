@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,68 +10,78 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>BKP GYM APP</title>
     <style>
-        p{
+        p {
             font-size: medium;
         }
-        h3{
+
+        h3 {
             margin-bottom: 20px;
             font-family: sans-serif;
         }
+
+        .nav-list {
+            display: none;
+        }
+
+        .nav-list.show {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
-    <div class="page-container" >
-        <div class="navigation" >
-            <a href="../index.html"><h1>BPK</h1></a>
-            <div class="container" onclick="myFunction(this)">
+    <div class="page-container">
+        <div class="navigation">
+            <a href="../index.html">
+                <h1>BPK</h1>
+            </a>
+            <div class="nav-list" id="menu">
+                <a href="../index.html">Home</a>
+                <a href="scan.html">Scan</a></li>
+                <a href="bestUsedWith.html">Best Paired with</a>
+            </div>
+            <section class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-              </div>
+            </section>
         </div>
         <div class="equip-main">
             <div class="equipment-info">
-                <h1>Barbell</h1>
+                <h1 id="equip-name"></h1>
                 <img src="../images/arms-barbell s.jpg" alt="barbell">
             </div>
             <h3>Check out these exercises you can do</h3>
             <div class="exercise-container">
-                <div class="exercise">
-                    <div class="instructions">
-                        <p class="exercise-name">barbell alternate biceps curl</p>
-                        <img src="https://edbv2-ff7foj6vca-uc.a.run.app/image/h-XqeCMCQ9OG3x" alt="demo">
-                        <h6>Target: <span>biceps</span></h6>
-                        <h6>Body Part: <span>quads</span></h6>
-                    </div>
-                </div>
-                <div class="exercise">
-                    <div class="instructions">
-                        <p class="exercise-name">barbell bench press</p>
-                        <img src="https://edbv2-ff7foj6vca-uc.a.run.app/image/F7MNhYADrn-7ny" alt="demo">
-                        <h6>Target: <span>pectorals</span></h6>
-                        <h6>Body Part: <span>chest</span></h6>
-                    </div>
-                </div>
-                <div class="exercise">
-                    <div class="instructions">
-                        <p class="exercise-name">barbell bench squat</p>
-                        <img src="https://edbv2-ff7foj6vca-uc.a.run.app/image/pxsRyEsC9RpJML" alt="demo">
-                        <h6>Target: <span>quads</span></h6>
-                        <h6>Body Part: <span>upper legs</span></h6>
-                    </div>
-                </div>
+                
+                
             </div>
         </div>
-        <div class="equip-footer" >
+        <div class="equip-footer">
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
 </body>
+<script type="text/x-template" class="exerciseTemplate">
+    {{#each this}}
+        <div class="exercise">
+            <div class="instructions">
+                <p class="exercise-name">{{name}}</p>
+                <img src={{gifUrl}} alt="demo">
+                <h6>Target: <span>{{target}}</span></h6>
+                <h6>Body Part: <span>{{bodyPart}}</span></h6>
+            </div>
+        </div>
+    {{/each}}
+</script>
 <script>
-    function myFunction(x) {
-      x.classList.toggle("change");
+    function myFunction(section) {
+        var navList = document.getElementById("menu");
+        navList.classList.toggle("show");
+        section.classList.toggle("change");
     }
     </script>
 <script src="../factory-functions/factoryFunction.js"></script>
-<script src="../pages/gymAppDom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script src="./equipment.js"></script>
 </html>

@@ -5,17 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../gymApps.css">
+    <link rel="stylesheet" href="bestUsedWith.css">
     <title>BKP GYM APP</title>
 </head>
 <body>
     <div class="container" >
-        <div class="header" >
-            <a href="index.html"><h1>BPK</h1></a>
-            <div class="container" onclick="myFunction(this)">
+        <div class="navigation" >
+            <a href="../index.html"><h1>BPK</h1></a>
+            <ul class="nav-list" id="menu">
+                <li onclick="closemenu()"><a href="../index.html">Home</a></li>
+                <li onclick="closemenu()"><a href="scan.html">Scan</a></li>
+                <li onclick="closemenu()"><a href="equipment.html">Equipment</a></li>
+                <li onclick="closemenu()"><a href="bestUsedWith.html">Best Pair</a></li>
+                <li onclick="closemenu()"><a href="videoDemo.html">Video</a></li>
+            </ul>
+            <div class="container bar" onclick="myFunction(this)" >
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-              </div>
+            </div>
         </div>
         <div class="main" >
         </div>
@@ -26,9 +34,25 @@
 </body>
 <script>
     function myFunction(x) {
-      x.classList.toggle("change");
+        x.classList.toggle("change");
+        var menu = document.getElementById("menu");
+  
+        if (menu.style.top === "65px") {
+          closemenu();
+        } else {
+          openmenu();
+        }
     }
+
+    function openmenu() {
+      var menu = document.getElementById("menu");
+          menu.style.top = "65px";
+    }
+
+    function closemenu() {
+      var menu = document.getElementById("menu");
+      menu.style.top = "-500px";
+    }
+
     </script>
-<script src="../factory-functions/factoryFunction.js"></script>
-<script src="../pages/gymAppDom.js"></script>
 </html>
