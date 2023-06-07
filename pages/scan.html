@@ -20,6 +20,13 @@
             font-family: 'Inter';
             font-style: normal;
         }
+        .nav-list {
+            display: none;
+        }
+
+        .nav-list.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -28,11 +35,15 @@
             <a href="../index.html">
                 <h1>BPK</h1>
             </a>
-            <div class="container" onclick="myFunction(this)">
+            <div class="nav-list" id="menu">
+                <a href="../index.html">Home</a>
+                <a href="">About</a>
+            </div>
+            <section class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-            </div>
+            </section>
         </div>
         <div class="main">
             <div class="part scanner-section">
@@ -45,11 +56,11 @@
     </div>
 </body>
 <script>
-    function myFunction(x) {
-        x.classList.toggle("change");
+     function myFunction(section) {
+        var navList = document.getElementById("menu");
+        navList.classList.toggle("show");
+        section.classList.toggle("change");
     }
 </script>
-<script src="../factory-functions/factoryFunction.js"></script>
 <script src="../pages/gymAppDom.js"></script>
-
 </html>

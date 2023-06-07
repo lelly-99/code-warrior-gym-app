@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,35 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="gymApps.css">
     <title>BKP GYM APP</title>
+    <style>
+        .nav-list {
+            display: none;
+        }
+
+        .nav-list.show {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="page-container" >
-        <div class="header" >
-            <a href="index.html"><h1>BPK</h1></a>
-            <div class="container" onclick="myFunction(this)">
+    <div class="page-container">
+        <div class="header">
+            <a href="index.html">
+                <h1>BPK</h1>
+            </a>
+            <ul class="nav-list" id="menu">
+                <a href="../index.html">Home</a>
+                <a href="scan.html">Scan</a>
+                <a href="equipment.html">About</a>
+            </ul>
+            <section class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-            </div>
+            </section>
         </div>
-        <div class="main" >
+        <div class="main">
             <div class="sub-main">
                 <div class="space">
                     <h2><span class="bkp">BKP </span><span class="fit">FITNESS</span></h2>
@@ -26,23 +44,29 @@
                 <div class="space">
                     <a href="./pages/scan.html">
                         <button>SCAN EQUIPMENT</button>
-                      </a>
+                    </a>
                 </div>
             </div>
-            <div class="content" >
-                <p>Welcome to our revolutionary fitness app! With our cutting-edge technology, scanning a QR code on any gym equipment instantly unlocks a world of possibilities. Our app empowers you with knowledge and creativity, providing an extensive library of exercises tailored to target specific muscle groups. From cardio machines to weightlifting equipment, we've got you covered. But we don't stop at just providing exercise instructions. Our app is your personal fitness guide, offering detailed demonstrations, workout tips, and modifications for all fitness levels. Say goodbye to monotony and hello to endless possibilities with our app.</p>
+            <div class="content">
+                <p>Welcome to our revolutionary fitness app! With our cutting-edge technology, scanning a QR code on any
+                    gym equipment instantly unlocks a world of possibilities. Our app empowers you with knowledge and
+                    creativity, providing an extensive library of exercises tailored to target specific muscle groups.
+                    From cardio machines to weightlifting equipment, we've got you covered. But we don't stop at just
+                    providing exercise instructions. Our app is your personal fitness guide, offering detailed
+                    demonstrations, workout tips, and modifications for all fitness levels. Say goodbye to monotony and
+                    hello to endless possibilities with our app.</p>
             </div>
         </div>
-        <div class="footer" >
+        <div class="footer">
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
 </body>
 <script>
-    function myFunction(x) {
-      x.classList.toggle("change");
+    function myFunction(section) {
+        var navList = document.getElementById("menu");
+        navList.classList.toggle("show");
+        section.classList.toggle("change");
     }
-    </script>
-<script src="../factory-functions/factoryFunction.js"></script>
-<script src="../pages/gymAppDom.js"></script>
+</script>
 </html>

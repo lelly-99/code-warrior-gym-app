@@ -118,8 +118,8 @@ h2 {
 }
 
 button {
-    width: 200px;
-    height: 50px;
+    width: 250px;
+    height: 60px;
     color: white;
     background-color: #B00020;
     border: none;
@@ -134,4 +134,10 @@ button {
 .bkp {
     font-size: larger;
     padding-top: 10px;
+}
+
+a {
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
 }

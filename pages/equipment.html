@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,24 +10,41 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>BKP GYM APP</title>
     <style>
-        p{
+        p {
             font-size: medium;
         }
-        h3{
+
+        h3 {
             margin-bottom: 20px;
             font-family: sans-serif;
         }
+
+        .nav-list {
+            display: none;
+        }
+
+        .nav-list.show {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
-    <div class="page-container" >
-        <div class="navigation" >
-            <a href="../index.html"><h1>BPK</h1></a>
-            <div class="container" onclick="myFunction(this)">
+    <div class="page-container">
+        <div class="navigation">
+            <a href="../index.html">
+                <h1>BPK</h1>
+            </a>
+            <div class="nav-list" id="menu">
+                <a href="../index.html">Home</a>
+                <a href="scan.html">Scan</a></li>
+                <a href="bestUsedWith.html">Best Paired with</a>
+            </div>
+            <section class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-              </div>
+            </section>
         </div>
         <div class="equip-main">
             <div class="equipment-info">
@@ -61,16 +79,16 @@
                 </div>
             </div>
         </div>
-        <div class="equip-footer" >
+        <div class="equip-footer">
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
 </body>
 <script>
-    function myFunction(x) {
-      x.classList.toggle("change");
+    function myFunction(section) {
+        var navList = document.getElementById("menu");
+        navList.classList.toggle("show");
+        section.classList.toggle("change");
     }
-    </script>
-<script src="../factory-functions/factoryFunction.js"></script>
-<script src="../pages/gymAppDom.js"></script>
+</script>
 </html>
