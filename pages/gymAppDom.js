@@ -23,6 +23,11 @@ function onScanSuccess(decodedText, decodedResult) {
     // console.log(`Scan result: ${decodedText}`, decodedResult);
     console.log(decodedText);
     console.log(decodedResult);
+
+    if(decodedText === "barbell"){
+        var url = "./equipment.html"
+        window.location.href = url;
+    }
 }
 
 var html5QrcodeScanner = new Html5QrcodeScanner(
