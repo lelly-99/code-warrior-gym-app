@@ -135,3 +135,9 @@ button {
     font-size: larger;
     padding-top: 10px;
 }
+
+a {
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+}
