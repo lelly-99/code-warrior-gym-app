@@ -5,88 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../gymApps.css">
+    <link rel="stylesheet" href="./equiment.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>BKP GYM APP</title>
     <style>
-        .footer {
-            background-color: #212121;
-            display: grid;
-            place-items: center;
-            color: #FFFFFF;
-            width: 100%;
-            height: fit-content;
-            position: fixed;
-            bottom: 0;
-            left: 0;
+        p{
+            font-size: medium;
         }
-        .main{
-            margin-top: 85px;
-            color: #212121;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        h3{
+            margin-bottom: 20px;
+            font-family: sans-serif;
         }
-        .headingEquipment{
-            color: #212121;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 800;
-            font-size: 30px;
-            line-height: 10px;
-            text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-        }
-        .equipmentImg{
-            width: 300px;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .infoEquipment{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 10px 100%;
-            grid-column-gap: 10px;
-        }
-        .instructions{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-items: center;
-        }
-        .instructions-header{
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 800;
-            font-size: 20px;
-            line-height: 15px;
-            text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-            color: black;
-            text-shadow: 0;
-        }
-        .instructions-paragraph {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            align-items: normal;
-            text-align: start;
-            width: (100%/2);
-        }
-      
-
-
     </style>
 </head>
 <body>
-    <div class="container" >
-        <div class="header" >
+    <div class="page-container" >
+        <div class="navigation" >
             <a href="../index.html"><h1>BPK</h1></a>
             <div class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
@@ -94,31 +28,40 @@
                 <div class="bar3"></div>
               </div>
         </div>
-        <div class="main" >
-            <h1 class="headingEquipment">BarBell</h1>
-            <div class="equipmentImg">
-                <img src="../images/barbell s.jpg" alt="Picture Of The Equipment" width="80%">
+        <div class="equip-main">
+            <div class="equipment-info">
+                <h1>Barbell</h1>
+                <img src="../images/barbell s.jpg" alt="barbell">
             </div>
-            <div class="infoEquipment">
-                <div class="instructions">
-                    <h2 class="instructions-header">Instructions</h2>
-                    <p class="instructions-paragraph">
-                         Stand with your feet shoulder-width apart, holding a dumbbell in each hand, palms facing forward.
-                         Keep your upper arms stationary and exhale as you curl the dumbbells towards your shoulders, contracting your biceps.
-                         Pause briefly at the top of the movement, squeezing your biceps.
-                         Inhale as you slowly lower the dumbbells back to the starting position in a controlled manner.
-                         Repeat for the desired number of repetitions.
-                    </p>
+            <h3>Check out these exercises you can do</h3>
+            <div class="exercise-container">
+                <div class="exercise">
+                    <div class="instructions">
+                        <p class="exercise-name">barbell alternate biceps curl</p>
+                        <img src="https://edbv2-ff7foj6vca-uc.a.run.app/image/h-XqeCMCQ9OG3x" alt="demo">
+                        <h6>Target: <span>biceps</span></h6>
+                        <h6>Body Part: <span>quads</span></h6>
+                    </div>
                 </div>
-                <div class="instructions">
-                    <h2 class="instructions-header">Target Muscle</h2>
-                    <p class="instructions-paragraph">Target Muscle Group: Biceps (front of the upper arm).
-                        Pairing Equipment: Dumbbell bicep curls can be paired with exercises like hammer curls or preacher curls to target the biceps from different angles.
-                    </p>
+                <div class="exercise">
+                    <div class="instructions">
+                        <p class="exercise-name">barbell bench press</p>
+                        <img src="https://edbv2-ff7foj6vca-uc.a.run.app/image/F7MNhYADrn-7ny" alt="demo">
+                        <h6>Target: <span>pectorals</span></h6>
+                        <h6>Body Part: <span>chest</span></h6>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="instructions">
+                        <p class="exercise-name">barbell bench squat</p>
+                        <img src="https://edbv2-ff7foj6vca-uc.a.run.app/image/pxsRyEsC9RpJML" alt="demo">
+                        <h6>Target: <span>quads</span></h6>
+                        <h6>Body Part: <span>upper legs</span></h6>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer" >
+        <div class="equip-footer" >
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
