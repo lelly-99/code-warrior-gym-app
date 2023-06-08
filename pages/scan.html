@@ -12,7 +12,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>BKP GYM APP</title>
     <style>
-        .part, .scanner-section {
+        .part,
+        .scanner-section {
             display: flex;
             justify-content: center;
             margin-top: 150px;
@@ -20,6 +21,7 @@
             font-family: 'Inter';
             font-style: normal;
         }
+
         .nav-list {
             display: none;
         }
@@ -29,6 +31,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="page-container">
         <div class="header">
@@ -37,7 +40,6 @@
             </a>
             <div class="nav-list" id="menu">
                 <a href="../index.html">Home</a>
-                <a href="">About</a>
             </div>
             <section class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
@@ -56,11 +58,12 @@
     </div>
 </body>
 <script>
-     function myFunction(section) {
+    function myFunction(section) {
         var navList = document.getElementById("menu");
         navList.classList.toggle("show");
         section.classList.toggle("change");
     }
 </script>
 <script src="../pages/gymAppDom.js"></script>
+
 </html>
