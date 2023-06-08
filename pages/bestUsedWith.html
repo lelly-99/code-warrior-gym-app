@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../gymApps.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="bestUsedWith.css">
     <title>BKP GYM APP</title>
 </head>
 
+<style>
+    p {
+        font-size: medium;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-family: sans-serif;
+    }
+</style>
 <body>
     <div class="container" >
         <div class="navigation" >
@@ -20,7 +32,7 @@
                 <li onclick="closemenu()"><a href="scan.html">Scan</a></li>
                 <li onclick="closemenu()"><a href="equipment.html">Equipment</a></li>
                 <li onclick="closemenu()"><a href="bestUsedWith.html">Best Pair</a></li>
-                <li onclick="closemenu()"><a href="videoDemo.html">Video</a></li>
+                <li onclick="closemenu()"><a href="videoDemo.html">Tips</a></li>
             </ul>
             <div class="container bar" onclick="myFunction(this)" >
                 <div class="bar1"></div>
@@ -29,36 +41,26 @@
             </div>
         </div>
         <div class="main">
-            <p>To achieve maximum results, you can pair the Barbell excercises with these equipments</p>
-            <div>
-                <img src="../images/dumbell.jpg" alt="dumbell" style="height: 100px; width: 100px;">
+            <div id="bestPair-container">
+
             </div>
         </div>
-        <div class="footer" >
+        <div class="footer">
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
+
 </body>
-<script>
-    function myFunction(x) {
-        x.classList.toggle("change");
-        var menu = document.getElementById("menu");
-  
-        if (menu.style.top === "65px") {
-          closemenu();
-        } else {
-          openmenu();
-        }
-    }
+<script id="bestPair-template" type="text/x-handlebars-template">
+    {{#each barbells}}
+      <div class="bestPair">
+        <h3>{{@key}}</h3>
+        <p class="bestPairParagraph">{{this}}</p>
+      </div>
+    {{/each}}
+  </script>
+<script src="../navigation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script src="./bestUsedWith.js"></script>
 
-    function openmenu() {
-      var menu = document.getElementById("menu");
-          menu.style.top = "65px";
-    }
-
-    function closemenu() {
-      var menu = document.getElementById("menu");
-      menu.style.top = "-500px";
-    }
-    </script>
 </html>

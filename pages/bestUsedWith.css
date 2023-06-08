@@ -12,7 +12,7 @@ body, html{
     display: block;
     height: 100%;
 }
-
+ 
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -65,9 +65,31 @@ ul{
         padding-top: 25px;
         width: 100%;
     }
-}
-@media only screen and (min-width: 780px) {
-    .bar{
-        display: none;
+    .bestPair{
+        width: 98%;
     }
 }
+@media only screen and (min-width: 780px) {
+    /* .bar{
+        display: none;
+    } */
+    .bestPair{
+        width: 500px;
+    }
+}
+
+.main{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h3{
+    text-align: center;
+}
+.bestPairParagraph{
+   text-align: center;
+ 
+} 
