@@ -26,13 +26,26 @@
             </div>
         </div>
         <div class="main" >
+            <div id="barbells-container">
+
+            </div>
         </div>
         <div class="footer" >
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
+    
 </body>
+<script id="barbells-template" type="text/x-handlebars-template">
+    {{#each barbells}}
+      <div class="barbell">
+        <h3>{{@key}}</h3>
+        <p>{{this}}</p>
+      </div>
+    {{/each}}
+  </script>
 <script>
+    
     function myFunction(x) {
         x.classList.toggle("change");
         var menu = document.getElementById("menu");
@@ -55,4 +68,6 @@
     }
 
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="./bestUsedWith.js" ></script>
 </html>
