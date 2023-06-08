@@ -11,23 +11,6 @@
         integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>BKP GYM APP</title>
-    <style>
-        .part, .scanner-section {
-            display: flex;
-            justify-content: center;
-            margin-top: 150px;
-            margin-bottom: 150px;
-            font-family: 'Inter';
-            font-style: normal;
-        }
-        .nav-list {
-            display: none;
-        }
-
-        .nav-list.show {
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <div class="page-container">
@@ -37,7 +20,7 @@
             </a>
             <div class="nav-list" id="menu">
                 <a href="../index.html">Home</a>
-                <a href="">About</a>
+                <a href="../index.html">Tips</a>
             </div>
             <section class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
@@ -55,12 +38,7 @@
         </div>
     </div>
 </body>
-<script>
-     function myFunction(section) {
-        var navList = document.getElementById("menu");
-        navList.classList.toggle("show");
-        section.classList.toggle("change");
-    }
-</script>
+<script src="../navigation.js"></script>
 <script src="../pages/gymAppDom.js"></script>
+
 </html>

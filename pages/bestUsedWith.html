@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../gymApps.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="bestUsedWith.css">
     <title>BKP GYM APP</title>
 </head>
 <style>
-    img {
-        margin: 90px;
+    p {
+        font-size: medium;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-family: sans-serif;
     }
 </style>
 <body>
@@ -28,18 +35,18 @@
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-            </div>
+            </section>
         </div>
         <div class="main">
             <div id="bestPair-container">
 
             </div>
         </div>
-        <div class="footer" >
+        <div class="footer">
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
-    
+
 </body>
 <script id="bestPair-template" type="text/x-handlebars-template">
     {{#each barbells}}
@@ -49,29 +56,8 @@
       </div>
     {{/each}}
   </script>
-<script>
-    
-    function myFunction(x) {
-        x.classList.toggle("change");
-        var menu = document.getElementById("menu");
-  
-        if (menu.style.top === "65px") {
-          closemenu();
-        } else {
-          openmenu();
-        }
-    }
+<script src="../navigation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script src="./bestUsedWith.js"></script>
 
-    function openmenu() {
-      var menu = document.getElementById("menu");
-          menu.style.top = "65px";
-    }
-
-    function closemenu() {
-      var menu = document.getElementById("menu");
-      menu.style.top = "-500px";
-    }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="./bestUsedWith.js" ></script>
 </html>

@@ -18,26 +18,18 @@
             margin-bottom: 20px;
             font-family: sans-serif;
         }
-
-        .nav-list {
-            display: none;
-        }
-
-        .nav-list.show {
-            display: block;
-        }
     </style>
 </head>
 
 <body>
     <div class="page-container">
-        <div class="navigation">
+        <div class="header">
             <a href="../index.html">
                 <h1>BPK</h1>
             </a>
             <div class="nav-list" id="menu">
                 <a href="../index.html">Home</a>
-                <a href="scan.html">Scan</a></li>
+                <a href="scan.html">Scan Equipment</a>
                 <a href="bestUsedWith.html">Best Paired with</a>
             </div>
             <section class="container" onclick="myFunction(this)">
@@ -53,11 +45,9 @@
             </div>
             <h3>Check out these exercises you can do</h3>
             <div class="exercise-container">
-                
-                
             </div>
         </div>
-        <div class="equip-footer">
+        <div class="footer">
             <p>&copy; FKB Fitness, 2023</p>
         </div>
     </div>
@@ -74,14 +64,7 @@
         </div>
     {{/each}}
 </script>
-<script>
-    function myFunction(section) {
-        var navList = document.getElementById("menu");
-        navList.classList.toggle("show");
-        section.classList.toggle("change");
-    }
-    </script>
-<script src="../factory-functions/factoryFunction.js"></script>
+<script src="../navigation.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 <script src="./equipment.js"></script>
 </script>
