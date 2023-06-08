@@ -27,12 +27,6 @@ function onScanSuccess(decodedText, decodedResult) {
 
         localStorage.setItem('imgSrc', '../images/dumbell.jpg');
     }
-    else if(decodedText === 'dumbbell'){
-        var url = "./equipment.html"
-        window.location.href = url;
-
-        localStorage.setItem('imgSrc', '../images/dumbell.jpg');
-    }
     else if(decodedText === 'smith machine'){
         var url = "./equipment.html"
         window.location.href = url;
