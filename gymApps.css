@@ -13,6 +13,7 @@ body {
     text-decoration: none;
     color: white;
     margin-left: 20px;
+    margin-top: 10px;
 }
 
 .header {
@@ -27,13 +28,20 @@ body {
     display: flex;
 }
 
-.container {
+.logo{
+    width: 150px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.container{
     margin-right: 20px;
     cursor: pointer;
 }
 
 .main {
     width: 100%;
+    margin-top: 50px;
 }
 
 .sub-main {
@@ -43,10 +51,35 @@ body {
     flex-direction: column;
     gap: 50px;
     padding: 100px;
+    height: 50vh;
 }
 
 .content {
     padding: 15px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 40px;
+    margin-top: 0;
+}
+
+.content img{
+    width: 70%;
+    height: 300px;
+    border-radius: 6px;
+    object-fit: cover;
+    justify-self: center;
+    align-self: center;
+}
+
+.content p{
+    text-align: left;
+    font-family: 'Poppins';
+    margin-top: 0;
+}
+
+.about-info{
+    margin-left: 20px;
 }
 
 .footer {
@@ -93,19 +126,19 @@ h1 {
     transform: translate(0, -11px) rotate(45deg);
 }
 
-p {
-    font-family: 'Inter';
+/* p {
+    font-family: 'Poppins', 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     text-align: center;
-}
+} */
 
 h2 {
     width: 179px;
     height: 35px;
 
-    font-family: 'Inter';
+    font-family: 'Poppins', 'Inter', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 40px;
@@ -138,40 +171,18 @@ button {
 
 a {
     color: white;
-    font-family: 'Inter';
+    font-family: 'Poppins', 'Inter', sans-serif;
     font-style: normal;
 }
 
-.nav-list {
-    display: none;
-}
-
-.nav-list.show {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .nav-list {
-        display: none;
+@media only screen and (max-width: 780px) {
+    .header a{
+        margin-left: 10px;
+    }
+    .content, .sub-main{
+        display: flex;
         flex-direction: column;
-        background: #B00020;
-        padding: 10px;
-        position: absolute;
-        top: 60px;
-        width: 100%;
+        align-items: center;
+        gap: 10px;
     }
-
-    .nav-list a {
-        padding: 10px;
-    }
-}
-
-.part,
-.scanner-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 180px;
-    margin-bottom: 150px;
-    font-family: 'Inter';
-    font-style: normal;
 }
