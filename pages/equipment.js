@@ -17,23 +17,25 @@ async function fetchData(equipment) {
     } catch (error) {
       console.error(error);
     }
-  }
-  
-  document.addEventListener("DOMContentLoaded", async () => {
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const imgEl = document.getElementById('equip-img');
     const equipment = localStorage.getItem('equipment');
     document.getElementById('equip-name').innerHTML = equipment;
-  
+    imgEl.setAttribute('src', localStorage.getItem('imgSrc'));
+
     try {
-      const data = await fetchData(equipment);
-  
-      console.log(data)
-  
-      let templateSource = document.querySelector('.exerciseTemplate').innerHTML;
-      let template = Handlebars.compile(templateSource);
-      let filledTemplate = template(data);
-      document.querySelector('.exercise-container').innerHTML = filledTemplate;
-    } catch (error) {
-      console.error(error);
+        const data = await fetchData(equipment);
+
+        console.log(data)
+
+        let templateSource = document.querySelector('.exerciseTemplate').innerHTML;
+        let template = Handlebars.compile(templateSource);
+        let filledTemplate = template(data);
+        document.querySelector('.exercise-container').innerHTML = filledTemplate;
+    }catch (error) {
+        console.error(error);
     }
-  });
+});
   
