@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="gymApps.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>BKP GYM APP</title>
     <style>
         .nav-list {
@@ -16,6 +17,23 @@
         .nav-list.show {
             display: block;
         }
+        .scan-btn{
+            font-weight: 800;
+            font-family: 'Inter';
+            border-radius: 3px;
+            font-size: medium;
+        }
+        .content h3{
+            color: #b00020;
+            text-align: left;
+            font-weight: bolder;
+            font-size: 1.7rem;
+            font-family: 'Poppins';
+            margin-bottom: 20px;
+        }
+        .content span{
+            color: black;
+        }
     </style>
 </head>
 
@@ -23,7 +41,7 @@
     <div class="page-container">
         <div class="header">
             <a href="index.html">
-                <h1>BPK</h1>
+                <img src="./images/logo (2).jpg" alt="BKP Fitness" class="logo">
             </a>
             <div class="nav-list" id="menu">
                 <a href="../index.html">Home</a>
@@ -43,19 +61,25 @@
                 </div>
                 <div class="space">
                     <a href="./pages/scan.html">
-                        <button>SCAN EQUIPMENT</button>
+                        <button class="scan-btn">SCAN EQUIPMENT</button>
                     </a>
                 </div>
             </div>
             <div class="content">
-                <p>Welcome to our revolutionary fitness app! With our cutting-edge technology, scanning a QR code on any
-                    gym equipment instantly unlocks a world of possibilities. Our app empowers you with knowledge and
-                    creativity, providing an extensive library of exercises tailored to target specific muscle groups.
-                    From cardio machines to weightlifting equipment, we've got you covered. But we don't stop at just
-                    providing exercise instructions. Our app is your personal fitness guide, offering detailed
-                    demonstrations, workout tips, and modifications for all fitness levels. Say goodbye to monotony and
-                    hello to endless possibilities with our app.</p>
+                <div class="about-info">
+                    <h3>ABOUT <span>US</span></h3>
+                    <p>Welcome to our revolutionary fitness app! With our cutting-edge technology, scanning a QR code on any
+                        gym equipment instantly unlocks a world of possibilities. Our app empowers you with knowledge and
+                        creativity, providing an extensive library of exercises tailored to target specific muscle groups.
+                        From cardio machines to weightlifting equipment, we've got you covered. But we don't stop at just
+                        providing exercise instructions. Our app is your personal fitness guide, offering detailed
+                        demonstrations, workout tips, and modifications for all fitness levels. Say goodbye to monotony and
+                        hello to endless possibilities with our app.
+                    </p>
+                </div>
+                <img src="./images/athletic-man-woman-with-dumbbells.jpg" alt="gym man and women">
             </div>
+            
         </div>
         <div class="footer">
             <p>&copy; FKB Fitness, 2023</p>
