@@ -108,4 +108,29 @@ body, html{
         flex-direction: column;
         align-items: center;
     }
+    #menu{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+        background-color: rgb(168, 0, 0);
+        width: 100%;
+        position: fixed;
+        top: -500px;
+        right: 0px;
+        padding-bottom: 15px;
+    }
+
+    #menu>a{
+        padding:10px 0px
+    }
 }
+@media only screen and (min-width: 780px) {
+    .bar{
+        display: none;
+    }
+    #menu{
+        padding-right: 40px;
+    }
+}
+

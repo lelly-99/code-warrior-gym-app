@@ -41,6 +41,7 @@ ul{
     display: flex;
     margin-right: 40px;
     color: black;
+    padding-bottom: 15px;
 }
 
 @media only screen and (max-width: 780px) {
@@ -53,7 +54,7 @@ ul{
         list-style: none;
         display: flex;
         margin-right: 0px;
-        background-color: azure;
+        background-color: rgb(168, 0, 0);
         display: block;
         width: 100%;
         position: fixed;
@@ -70,9 +71,9 @@ ul{
     }
 }
 @media only screen and (min-width: 780px) {
-    /* .bar{
+    .bar{
         display: none;
-    } */
+    }
     .bestPair{
         width: 500px;
     }
