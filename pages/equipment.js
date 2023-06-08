@@ -9,24 +9,38 @@ async function fetchData(equipment) {
     };
   
     try {
-      const response = await fetch(url, options);
-      const result = await response.json();
-      const limitedData = result.slice(0, 10); // Limit to 10 objects
-      console.log(limitedData);
-      return limitedData;
+      // Check if data exists in local storage
+      const storedData = localStorage.getItem(equipment);
+      if (storedData) {
+        console.log('Fetching data from local storage...');
+        const parsedData = JSON.parse(storedData);
+        return parsedData;
+      } else {
+        console.log('Fetching data from API...');
+        const response = await fetch(url, options);
+        const result = await response.json();
+        const limitedData = result.slice(0, 10); // Limit to 10 objects
+  
+        // Save data to local storage
+        localStorage.setItem(equipment, JSON.stringify(limitedData));
+  
+        return limitedData;
+      }
     } catch (error) {
       console.error(error);
     }
   }
   
   document.addEventListener("DOMContentLoaded", async () => {
+    const imgEl = document.getElementById('equip-img');
     const equipment = localStorage.getItem('equipment');
     document.getElementById('equip-name').innerHTML = equipment;
+    imgEl.setAttribute('src', localStorage.getItem('imgSrc'));
   
     try {
       const data = await fetchData(equipment);
   
-      console.log(data)
+      console.log(data);
   
       let templateSource = document.querySelector('.exerciseTemplate').innerHTML;
       let template = Handlebars.compile(templateSource);
