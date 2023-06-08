@@ -39,10 +39,25 @@ const theEquipment = [
       'wheel rollerout': 'Incorporate Russian twists into your workout routine to target the oblique muscles and add rotational strength to your core.',
       
     },
+    smith_machine: {
+      'smith back shrug': 'Smith machine bent-over rows: Perform bent-over rows using the Smith machine to target your back muscles further.',
+      'smith behind neck press': 'Shoulder lateral raises: Perform shoulder lateral raises using dumbbells or cables to target the side deltoids and further develop shoulder strength and stability.',
+      'smith bench press': 'Incorporate incline bench press exercises to target the upper chest muscles.',
+      'smith bent knee good morning': 'Incorporate Romanian deadlifts using a barbell or dumbbells to further target and strengthen your hamstrings and glutes.',
+      "smith bent over row":'Deadlifts: Incorporate deadlift variations such as Romanian deadlifts or sumo deadlifts to further target and strengthen your posterior chain muscles.',
+      "smith chair squat":"Perform Bulgarian split squats using dumbbells or kettlebells to target your lower body muscles in a single-leg movement.",
+      "smith close-grip bench press":"The Smith close-grip bench press can be paired with other triceps exercises, such as triceps dips or triceps pushdowns, to further target and strengthen the triceps. Additionally, incorporating chest exercises like dumbbell chest presses or push-ups can provide a balanced upper body workout.",
+      "smith decline bench press":"The Smith machine decline bench press can be paired with other chest exercises, such as dumbbell flyes or push-ups, to create a comprehensive chest workout routine. Additionally, incorporating exercises for other muscle groups, such as triceps dips or shoulder presses, can provide a well-rounded upper body workout.",
+      "smith decline reverse-grip press":"The Smith machine decline reverse-grip press can be paired with other chest exercises, such as incline bench press or dumbbell pullovers, to create a comprehensive chest workout routine. Additionally, incorporating exercises for other muscle groups, such as triceps dips or bicep curls, can provide a well-rounded upper body workout.",
+    },
   }
 ];
 let theItem = localStorage.getItem("equipment")
-
+if(theItem === 'wheel roller'){
+  theItem = "wheel_roller"
+}else if(theItem === 'smith machine'){
+  theItem = "smith_machine"
+}
 document.addEventListener("DOMContentLoaded", async () => {
   const barbellsContainer = document.getElementById("bestPair-container");
 

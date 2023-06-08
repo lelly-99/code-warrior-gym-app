@@ -190,7 +190,7 @@ a {
         display: flex;
         flex-direction: column;
         margin-right: 0px;
-        background-color: rgb(168, 0, 0);
+        background-color: #B00020;
         width: 100%;
         position: fixed;
         top: -500px;

@@ -16,7 +16,7 @@ const menubar = document.querySelector(".bar");
 function openmenu() {
   var menu = document.getElementById("menu");
   menubar.classList.add("change");
-  menu.style.top = "65px";
+  menu.style.top = "64px";
 }
 
 function closemenu() {
@@ -27,7 +27,7 @@ function closemenu() {
 
 menubar.addEventListener("click", function() {
   var menu = document.getElementById("menu");
-  if (menu.style.top === "65px") {
+  if (menu.style.top === "64px") {
     closemenu();
   } else {
     openmenu();
