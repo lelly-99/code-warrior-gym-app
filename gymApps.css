@@ -1,15 +1,15 @@
-body{
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.page-container{
+.page-container {
     padding: 0;
     margin: 0;
 }
 
-.header a{
+.header a {
     text-decoration: none;
     color: white;
     margin-left: 20px;
@@ -27,16 +27,16 @@ body{
     display: flex;
 }
 
-.container{
+.container {
     margin-right: 20px;
     cursor: pointer;
 }
 
-.main{
+.main {
     width: 100%;
 }
 
-.sub-main{
+.sub-main {
     background-image: url(./images/gym-background.jpg);
     background-size: cover;
     display: flex;
@@ -45,7 +45,7 @@ body{
     padding: 100px;
 }
 
-.content{
+.content {
     padding: 15px;
 }
 
@@ -138,6 +138,40 @@ button {
 
 a {
     color: white;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.nav-list {
+    display: none;
+}
+
+.nav-list.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #B00020;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+    }
+
+    .nav-list a {
+        padding: 10px;
+    }
+}
+
+.part,
+.scanner-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+    margin-bottom: 150px;
     font-family: 'Inter';
     font-style: normal;
 }
