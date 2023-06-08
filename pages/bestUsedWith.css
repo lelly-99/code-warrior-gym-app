@@ -65,10 +65,16 @@ ul{
         padding-top: 25px;
         width: 100%;
     }
+    .bestPair{
+        width: 98%;
+    }
 }
 @media only screen and (min-width: 780px) {
     .bar{
         display: none;
+    }
+    .bestPair{
+        width: 500px;
     }
 }
 
@@ -82,6 +88,6 @@ ul{
 h3{
     text-align: center;
 }
-.barbell{
-    width: 500px;
+.bestPairParagraph{
+   text-align: center;
 }

@@ -22,7 +22,7 @@
                 <li onclick="closemenu()"><a href="scan.html">Scan</a></li>
                 <li onclick="closemenu()"><a href="equipment.html">Equipment</a></li>
                 <li onclick="closemenu()"><a href="bestUsedWith.html">Best Pair</a></li>
-                <li onclick="closemenu()"><a href="videoDemo.html">Video</a></li>
+                <li onclick="closemenu()"><a href="videoDemo.html">Tips</a></li>
             </ul>
             <div class="container bar" onclick="myFunction(this)" >
                 <div class="bar1"></div>
@@ -31,9 +31,8 @@
             </div>
         </div>
         <div class="main">
-            <p>To achieve maximum results, you can pair the Barbell excercises with these equipments</p>
-            <div>
-                <img src="../images/dumbell.jpg" alt="dumbell" style="height: 100px; width: 100px;">
+            <div id="bestPair-container">
+
             </div>
         </div>
         <div class="footer" >
@@ -42,11 +41,11 @@
     </div>
     
 </body>
-<script id="barbells-template" type="text/x-handlebars-template">
+<script id="bestPair-template" type="text/x-handlebars-template">
     {{#each barbells}}
-      <div class="barbell">
+      <div class="bestPair">
         <h3>{{@key}}</h3>
-        <p>{{this}}</p>
+        <p class="bestPairParagraph">{{this}}</p>
       </div>
     {{/each}}
   </script>
