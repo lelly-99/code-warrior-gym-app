@@ -12,7 +12,7 @@ async function fetchData(equipment) {
     const response = await fetch(url, options);
     const result = await response.json();
     const limitedData = result.slice(0, 10); // Limit to 10 objects
-    console.log(limitedData);
+    // console.log(limitedData);
     return limitedData;
   } catch (error) {
     console.error(error);
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
       const data = await fetchData(equipment);
 
-      console.log(data);
+      // console.log(data);
 
       let templateSource = document.querySelector('.exerciseTemplate').innerHTML;
       let template = Handlebars.compile(templateSource);
