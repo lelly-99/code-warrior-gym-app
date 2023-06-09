@@ -3,7 +3,7 @@ async function fetchData(equipment) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '3606f20607msheef339fe771ec91p1cb26djsnb444be19876e',
+      'X-RapidAPI-Key': '7cdeed5614msh2d8cf0801fa25aap1636e8jsn3afbfb08e529',
       'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     }
   };
